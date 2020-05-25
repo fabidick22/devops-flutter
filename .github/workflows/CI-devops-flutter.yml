@@ -18,6 +18,11 @@ jobs:
       - run: flutter test
       - run: flutter build apk --debug --split-per-abi
 
+      - name: Show apk
+        run: |
+          pwd
+          ls build/app/outputs/apk/debug/
+
       - name: Create a Release APK
         uses: ncipollo/release-action@v1
         with:
