@@ -1,5 +1,7 @@
+name: "Test APK"
+
 on: push
-name: Test, Build and Release apk
+
 jobs:
   build:
     name: Build APK
@@ -23,11 +25,11 @@ jobs:
           pwd
           ls build/app/outputs/apk/debug/
 
-      - name: Create a Release APK
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "build/app/outputs/apk/debug/*.apk"
-          token: ${{ secrets.TOKEN }}
+#      - name: Create a Release APK
+#        uses: ncipollo/release-action@v1
+#        with:
+#          artifacts: "build/app/outputs/apk/debug/*.apk"
+#          token: ${{ secrets.TOKEN }}
 
 #      - uses: jakejarvis/s3-sync-action@master
 #        with:
