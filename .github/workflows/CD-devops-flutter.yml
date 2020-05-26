@@ -3,7 +3,7 @@ name: "Build and Release APK"
 on:
   push:
     branches:
-      - "ci-cd-pipeline"
+      - "master"
 
 jobs:
   pre-release:
@@ -36,7 +36,7 @@ jobs:
       - name: Tag
         uses: K-Phoen/semver-release-action@master
         with:
-          release_branch: ci-cd-pipeline
+          release_branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
