@@ -1,9 +1,9 @@
 name: "Build and Release APK"
 
-on: push
-#  push:
-#    branches:
-#      - "ci-cd-pipeline"
+on:
+  push:
+    branches:
+      - "ci-cd-pipeline"
 
 jobs:
   pre-release:
@@ -34,11 +34,11 @@ jobs:
           echo "done!"
 
       - name: Tag
-          uses: K-Phoen/semver-release-action@master
-          with:
-            release_branch: ci-cd-pipeline
-          env:
-            GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        uses: K-Phoen/semver-release-action@master
+        with:
+          release_branch: ci-cd-pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 #      - uses: "marvinpinto/action-automatic-releases@latest"
 #        with:
