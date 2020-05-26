@@ -1,9 +1,9 @@
 name: "Build and Release APK"
 
-on:
-  push:
-    branches:
-      - "ci-cd-pipeline"
+on: push
+#  push:
+#    branches:
+#      - "ci-cd-pipeline"
 
 jobs:
   pre-release:
