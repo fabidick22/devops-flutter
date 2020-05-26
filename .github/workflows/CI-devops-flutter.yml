@@ -22,7 +22,7 @@ jobs:
       - name: Show apk
         run: |
           pwd
-          ls build/app/outputs/apk/debug/
+#          ls build/app/outputs/apk/debug/
 
 #      - name: Create a Release APK
 #        uses: ncipollo/release-action@v1

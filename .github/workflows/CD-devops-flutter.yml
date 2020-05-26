@@ -33,6 +33,13 @@ jobs:
         run: |
           echo "done!"
 
+      - name: Tag
+          uses: K-Phoen/semver-release-action@master
+          with:
+            release_branch: ci-cd-pipeline
+          env:
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
 #      - uses: "marvinpinto/action-automatic-releases@latest"
 #        with:
 #          repo_token: "${{ secrets.TOKEN }}"
@@ -41,10 +48,3 @@ jobs:
 #          title: "Development Build"
 #          files: |
 #            build/app/outputs/apk/debug/*.apk
-
-      - name: Tag
-          uses: K-Phoen/semver-release-action@master
-          with:
-            release_branch: master
-          env:
-            GITHUB_TOKEN: ${{ secrets.TOKEN }}
