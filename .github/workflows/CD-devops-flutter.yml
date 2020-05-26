@@ -36,7 +36,7 @@ jobs:
       - name: Tag
         uses: K-Phoen/semver-release-action@master
         with:
-          release_branch: ci-cd-pipeline
+          release_branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
