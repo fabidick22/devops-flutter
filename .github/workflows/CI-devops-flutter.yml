@@ -1,4 +1,4 @@
-name: "CI Pipeline"
+name: "Build and Testing APK"
 
 on: pull_request
 
