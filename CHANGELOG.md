@@ -1,3 +1,17 @@
+## [0.3.1](https://github.com/fabidick22/devops-flutter/compare/v0.3.0...v0.3.1) (2020-06-16)
+
+### Bug Fixes
+
+- Update outputs ([b171d93](https://github.com/fabidick22/devops-flutter/commit/b171d930c8fc397553e5af0878c0562845af024b))
+- Update outputs ([eee2719](https://github.com/fabidick22/devops-flutter/commit/eee27190c31238352e3ad285050f9c87bec6e198))
+
+### Other
+
+- update CD process 2 ([62a16b3](https://github.com/fabidick22/devops-flutter/commit/62a16b34eab20ee82aa691452fbbc0a9d36d4592))
+- update CD process 2 ([f634687](https://github.com/fabidick22/devops-flutter/commit/f634687eb99853abc3c23c454b3f8e8c059b546a))
+- update CD process ([9207bb6](https://github.com/fabidick22/devops-flutter/commit/9207bb6855aefef80b5ab155621bf871d8b315bd))
+- update CD process ([4433e4e](https://github.com/fabidick22/devops-flutter/commit/4433e4e211b729f42a6a94ccff12dcf195f6e705))
+
 # [0.3.0](https://github.com/fabidick22/devops-flutter/compare/v0.2.0...v0.3.0) (2020-06-16)
 
 ### Bug Fixes
