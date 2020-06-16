@@ -35,6 +35,7 @@ jobs:
           echo "done!"
 
       - name: Release
+        id: build_package
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         uses: ridedott/release-me-action@master
