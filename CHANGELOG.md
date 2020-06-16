@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/fabidick22/devops-flutter/compare/v0.3.2...v0.3.3) (2020-06-16)
+
+### Bug Fixes
+
+- Remove action ([5f87ff2](https://github.com/fabidick22/devops-flutter/commit/5f87ff2113cc3d81727fe8c10504fd5f94969cd2))
+- Remove action ([91ededc](https://github.com/fabidick22/devops-flutter/commit/91ededc83b3f8852b9bc89b61e2775c5f2c7774b))
+
 ## [0.3.2](https://github.com/fabidick22/devops-flutter/compare/v0.3.1...v0.3.2) (2020-06-16)
 
 ### Bug Fixes
