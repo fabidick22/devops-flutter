@@ -1,11 +1,14 @@
-name: "Test APK"
+name: "CI Pipeline"
 
-on: push
+on: pull_request
 
 jobs:
   build:
-    name: Test APK
+    name: Build APK
     runs-on: ubuntu-latest
+    env:
+      CI_PATH: "CI/"
+      PR_NUMBER: ""
     steps:
       - uses: actions/checkout@v1
 
@@ -16,26 +19,26 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.17.1'
+
       - run: flutter pub get
       - run: flutter test
+      - run: flutter build apk --debug --split-per-abi
 
-      - name: Show apk
-        run: |
-          pwd
-#          ls build/app/outputs/apk/debug/
+      - name: Get PR number
+        run:
+          echo ::set-env name=PR_NUMBER::$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
 
-#      - name: Create a Release APK
-#        uses: ncipollo/release-action@v1
-#        with:
-#          artifacts: "build/app/outputs/apk/debug/*.apk"
-#          token: ${{ secrets.TOKEN }}
+      - name: "Show PR"
+        run:
+          echo $PR_NUMBER
 
-#      - uses: jakejarvis/s3-sync-action@master
-#        with:
-#          args: --acl public-read --follow-symlinks --delete
-#        env:
-#          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#          AWS_REGION: 'us-west-1'
-#          SOURCE_DIR: 'build/app/outputs/apk/debug/'
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'us-west-1'
+          DEST_DIR: ${{ env.CI_PATH }}${{ env.PR_NUMBER }}
+          SOURCE_DIR: 'build/app/outputs/apk/debug/*.apk'
