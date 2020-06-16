@@ -43,7 +43,9 @@ jobs:
 
       - name: Outputs
         run: |
-          echo released version: ${{ steps }}
+          echo released version: ${{ steps.build_package.outputs.version }}
+          echo released version: ${{ steps.build_package.outputs.released }}
+          echo released version: ${{fromJson(steps)}}
 
       - name: Output
         if: steps.build_package.outputs.released == 'true'

@@ -1,3 +1,5 @@
+![CI Pipeline](https://github.com/fabidick22/devops-flutter/workflows/CI%20Pipeline/badge.svg)
+
 # flutterapp
 
 This is a simple example to implement a CI / CD pipeline for an application written in flutter.
