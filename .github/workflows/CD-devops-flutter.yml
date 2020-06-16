@@ -50,11 +50,10 @@ jobs:
         run: |
           echo released version: ${{ steps.build_package.outputs.released }}
 
-      - name: Outputs
-        env:
-          json_var: ${{ steps }}
+      - name: Output
+        if: steps.build_package.outputs.released == true
         run: |
-          echo $json_var | jq '.'
+          echo released version: ${{ steps.build_package.outputs.version }}, type: ${{ steps.build_package.outputs.level }}
 
       - name: Output
         if: steps.build_package.outputs.released == 'true'
