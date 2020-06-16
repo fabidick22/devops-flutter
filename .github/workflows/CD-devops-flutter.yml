@@ -41,6 +41,10 @@ jobs:
         with:
           release-branches: '["releases","master"]'
 
+      - name: Outputs
+        run: |
+          echo released version: ${{ steps }}
+
       - name: Output
         if: steps.build_package.outputs.released == 'true'
         run: |
