@@ -9,7 +9,9 @@ jobs:
   pre-release:
     name: "Pre Release"
     runs-on: "ubuntu-latest"
-
+    env:
+      RELEASE_PATH: "releases/"
+      MODE: "release"
     steps:
       - uses: actions/checkout@v1
 
@@ -26,7 +28,7 @@ jobs:
       - name: Show apk
         run: |
           pwd
-          ls build/app/outputs/apk/debug/
+          ls build/app/outputs/apk/${{ env.MODE }}/
 
       - name: "Build & test"
         run: |
