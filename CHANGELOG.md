@@ -1,3 +1,19 @@
+# [0.3.0](https://github.com/fabidick22/devops-flutter/compare/v0.2.0...v0.3.0) (2020-06-16)
+
+### Bug Fixes
+
+- Add status badge ([e0554a3](https://github.com/fabidick22/devops-flutter/commit/e0554a38b14784b62d3794f307a979b4404faedd))
+
+### Features
+
+- Add new logs ([d8c8a1a](https://github.com/fabidick22/devops-flutter/commit/d8c8a1a3e3d10e40386e2cd1b2c011b8ea60462a))
+
+### Other
+
+- Test releases ([598d9f2](https://github.com/fabidick22/devops-flutter/commit/598d9f2f195f1f0ec8ed19ce4ad90402ab76c4c9))
+- print outputs ([0df705d](https://github.com/fabidick22/devops-flutter/commit/0df705d1a2f0a573df07372daa182ee284018384))
+- print outputs ([4d6b90d](https://github.com/fabidick22/devops-flutter/commit/4d6b90d654ea2a1fe0ea769aafd88daead55280b))
+
 # [0.2.0](https://github.com/fabidick22/devops-flutter/compare/v0.1.0...v0.2.0) (2020-06-16)
 
 ### Features
