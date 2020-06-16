@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/fabidick22/devops-flutter/compare/v0.3.1...v0.3.2) (2020-06-16)
+
+### Bug Fixes
+
+- Add id to release step ([d35ac4b](https://github.com/fabidick22/devops-flutter/commit/d35ac4bf475477cd7b801f07cd777d5f4c05f1e0))
+- Add id to release step ([258c78e](https://github.com/fabidick22/devops-flutter/commit/258c78e43c9018f49ad15e639102812b8c51636b))
+
 ## [0.3.1](https://github.com/fabidick22/devops-flutter/compare/v0.3.0...v0.3.1) (2020-06-16)
 
 ### Bug Fixes
